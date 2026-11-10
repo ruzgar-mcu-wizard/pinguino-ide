@@ -8,8 +8,8 @@ This README covers obtaining the IDE and libraries, launching the application, a
 
 The Pinguino development environment uses two repositories:
 
-- [Pinguino IDE](https://github.com/PinguinoIDE/pinguino-ide) — the IDE source.
-- [Pinguino libraries](https://github.com/PinguinoIDE/pinguino-libraries) — the associated device libraries.
+- [Pinguino IDE](https://github.com/PinguinoIDE/pinguino-ide) - the IDE source.
+- [Pinguino libraries](https://github.com/PinguinoIDE/pinguino-libraries) - the associated device libraries.
 
 The compiler toolchains are separate dependencies and must also be available on your system.
 
