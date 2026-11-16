@@ -54,7 +54,7 @@ For the original project, see [PinguinoIDE/pinguino-ide](https://github.com/Ping
 
 Found a bug, compatibility problem, or something that does not work as expected?
 
-Please [open an issue in this repository](https://github.com/ruzgar-mcu-wizard/pinguino-ide/issues) and include:
+Please [open an issue in this repository](https://github.com/ruzgar-mcu-wizard/pinguino-ide/issues/new) and include:
 
 - Your Windows version.
 - What you were trying to do.
