@@ -1,4 +1,4 @@
-# Pinguino IDE 13 — Windows Port
+# Pinguino IDE 13 - Windows Port
 
 An unofficial Windows port of the discontinued **Pinguino IDE**, bringing the legacy PIC microcontroller development environment to modern Windows systems.
 
@@ -10,7 +10,7 @@ This project is intended for hobbyists, educators, and anyone who still works wi
 
 Get the Windows release from the [Releases page](https://github.com/ruzgar-mcu-wizard/pinguino-ide/releases).
 
-The current release is **v13.0.0 — Pinguino IDE Windows Port Release**. It is published as a pre-release and is available in these archive formats:
+The current release is **v13.0.0 - Pinguino IDE Windows Port Release**. It is published as a pre-release and is available in these archive formats:
 
 - [7-Zip archive (.7z)](https://github.com/ruzgar-mcu-wizard/pinguino-ide/releases/download/pinguino-ide-windows/Pinguino-IDE.7z)
 - [RAR archive (.rar)](https://github.com/ruzgar-mcu-wizard/pinguino-ide/releases/download/pinguino-ide-windows/Pinguino-IDE.rar)
